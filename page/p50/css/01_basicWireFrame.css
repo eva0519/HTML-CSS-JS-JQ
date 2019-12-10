@@ -1,0 +1,17 @@
+*{margin:0 auto; padding:0;}  /*전체 스타일에 여백적용시 페딩초기화로 픽셀 크기 조정을 편하게*/
+ul,li{list-style:none}
+#wrap{width:600px;}
+header{background:#09f;}
+h1{padding:20px; color:#fff;}
+h5{padding:0 0 10px 20px; color:#fff;}
+nav{background-color:#ccc;}
+nav li{float:left; padding:5px; margin:0; text-align:center; color:#333; width:90px;}
+nav:after{content:""; clear:both; display:block;}  /*클리어 초기화*/
+article{float:left;}
+section{width:400px; background-color:#eee;}
+h2{padding:10px 0 0 20px;}
+h3{padding:10px 0 0 20px;}
+aside{width:200px; float:right;}
+#content:after{content:""; clear:both; display:block;}
+footer{background:#666; color:#fff; width:600px;}
+p{padding:20px;}

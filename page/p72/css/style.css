@@ -1,0 +1,9 @@
+@charset "utf-8";
+.img1:hover{transform: translateY(50px);}
+.img2:hover{transform: translate(50px);}     /* 이동 (x,y) */
+.img3:hover{transform: translate(-50px,50px);}
+.img4{transform: translate(-50%,-50%); top:50%; left:50%; position: fixed;} /* 팝업창 같은걸 띄울때 위치잡을때 씀 */
+.img5:hover{transform: scaleX(.8);}
+.img6:hover{transform: scale(1.2,1.5);}   /* 줄이기,잡아늘리기 (x,y) */
+.img7:hover{transform: rotate(30deg);}    /* 돌리기 */
+.img8:hover{transform: skew(-15deg,0);}   /* 기울이기 */

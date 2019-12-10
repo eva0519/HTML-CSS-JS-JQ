@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>강원천문대</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="bg"></div>
+    <div id="wrap">
+        <header class="cf">
+            <div id="logo"><a href="#"><img src="image/logo.png" alt="logo"></a></div>
+            <nav>
+                <ul class="gnb cf">
+                    <li><a href="#">버튼1</a>
+                        <ul class="sub">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">버튼1</a>
+                        <ul class="sub">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">버튼1</a>
+                        <ul class="sub">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">버튼1</a>
+                        <ul class="sub">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="slide">
+            <ul class="slideUl">
+                <li class="slideItem"><a href="#"><img src="image/slide1.jpg" alt="slide1"></a></li>
+                <li class="slideItem"><a href="#"><img src="image/slide2.jpg" alt="slide2"></a></li>
+                <li class="slideItem"><a href="#"><img src="image/slide3.jpg" alt="slide3"></a></li>
+            </ul>
+        </div>
+        <div id="content" class="cf">
+            <section>
+                <ul class="notice cf">
+                    <li class="note"><a href="#">공지사항</a></li>
+                    <li class="gall"><a href="#">갤러리</a></li>
+                </ul>
+                <ul class="noteBox">
+                    <li><a href="#" onclick="showPopup()"><span>100</span><span>blahblahblahblah</span><span>2019-11-14</span></a></li>
+                    <li><a href="#"><span>100</span><span>blahblahblahblah</span><span>2019-11-14</span></a></li>
+                    <li><a href="#"><span>100</span><span>blahblahblahblah</span><span>2019-11-14</span></a></li>
+                    <li><a href="#"><span>100</span><span>blahblahblahblah</span><span>2019-11-14</span></a></li>
+                </ul>
+                <ul class="gallBox cf">
+                    <li><a href="#"><img src="image/gall_1.jpg" alt="img1"></a></li>
+                    <li><a href="#"><img src="image/gall_2.jpg" alt="img2"></a></li>
+                    <li><a href="#"><img src="image/gall_3.jpg" alt="img3"></a></li>
+                </ul>
+            </section>
+            <section>
+                <ul class="banner">
+                    <li class="bannerItem"><a href="#"><img src="image/banner_1.jpg" alt="ban1"></a></li>
+                    <li class="bannerItem"><a href="#"><img src="image/banner_2.jpg" alt="ban2"></a></li>
+                </ul>
+            </section>
+            <section>
+                <ul class="shortcut">
+                    <li><a href="#">바로가기1</a></li>
+                    <li><a href="#">바로가기2</a></li>
+                    <li><a href="#">바로가기3</a></li>
+                </ul>
+            </section>
+        </div>
+        <div id="footer" class="cf">
+            <div class="left">
+                <div class="f_logo"><a href="#"><img src="image/logo_footer.png" alt="flogo"></a></div>
+            </div>
+            <div class="right">
+                <div class="f_menu">
+                    <ul class="fooMenu">
+                    <li><a href="#">푸터메뉴</a></li>
+                    <li><a href="#">푸터메뉴</a></li>
+                    <li><a href="#">푸터메뉴</a></li>
+                    </ul>
+                </div>
+                <div class="copy">Copyright</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup">
+        <h3>타이틀</h3>
+        <hr>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel rerum sunt accusantium voluptate repudiandae harum minima natus omnis, architecto sapiente perspiciatis porro soluta unde ea provident laborum eligendi aliquam voluptas!
+        Unde, accusantium iste placeat ipsum laborum, itaque non obcaecati reprehenderit corrupti dicta amet natus culpa! Impedit quasi, officiis eos est temporibus nihil adipisci dolorem commodi ullam modi accusantium tempore quos!
+        Quam harum provident necessitatibus eum, minima quasi distinctio laborum officiis ducimus libero deleniti obcaecati magni, nihil doloremque. Cum tenetur excepturi saepe fuga veniam ab provident labore repellendus vel! Est, rerum!</p>
+        <button class="close" onclick="hidePopup()">닫기</button>
+    </div>
+
+    <script src="js/script.js"></script>    
+</body>
+</html>

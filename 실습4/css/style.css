@@ -1,0 +1,45 @@
+@charset "utf-8";
+* {margin:0 auto; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:inherit; display:block; text-align: center;}
+
+.cf:after{content:""; clear:both; display:block;}
+
+h1{line-height:80px; padding-left:20px; color:#fff;}
+h3{line-height:40px; padding-left:20px; color:#fff;}
+
+#wrap{width:800px; background: #ccc;}
+header{width:100%; height:160px; background: #69f;}
+
+.gnb>li{float:left;}
+.gnb>li>a{width:160px; line-height:40px; background:#14f; color:#fff;}
+.gnb>li>a:hover{background:#333;}
+
+.sub{display:none; position:absolute; z-index:1;}
+.sub>li>a{width:160px; line-height:40px; background:rgba(0,60,255,0.6); color:#fff;}
+.sub>li>a:hover{background:#333;}
+
+.gnb>li:hover .sub{display:block;}
+
+/* content */
+.subButton>li>a{width:160px; line-height:40px; background:#9cc; color:#fff;}
+.subButton>li>a:hover{background:#333;}
+
+aside{width:160px; float:left;}
+article{width:480px; float:left; background: #aaa;}
+
+.img_p{padding:20px;}
+img{margin:20px;}
+img:hover{opacity: .6;}
+
+html,body,#wrap,aside,.content,article{height:100%;}
+.left{background:#9cc;}
+.right{background:url(../img/bg.gif)}
+/* .left와 .right에 배경을 각각 설정하기 위해서 35번줄처럼 배경을 설정하려는 태그 상위의 모든 태그들에게 height 100%를 먹여야함 */
+
+.right>h3{padding:20px 0 0 20px; color:#000;}
+.right>p{padding:20px;}
+
+footer{background:#333; width:100%; line-height: 80px; text-align: center; color:#fff;}
+
+/* 이미지 동영상 등 크기 정리할땐 p로 감싸서 정리하는게 편함 */

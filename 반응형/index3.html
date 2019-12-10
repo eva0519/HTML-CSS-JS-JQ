@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin:0 auto; padding:0;}
+    li,ul{list-style: none;}
+    a{text-decoration: none; color:inherit; display:block; text-align: center;}
+    
+    .cf:after{content:""; clear:both; display:block;}
+
+    #wrap{width:90%;}
+    header>h1{padding:2%; color:#fff;}
+    header>h5{padding:0 0 1% 2%; color:#fff;}
+    header{width:100%; background:rgb(177, 186, 212)}
+    
+    .gnb>li>a{width:100%; line-height:40px; background:rgb(248, 190, 81); color:#333;}
+    .gnb>li>a:hover{background:rgb(253, 247, 167); color:#333;}
+    .gnb>li{float:left; width:16.666%;}
+
+    article{width:70%; background:rgb(241, 222, 219); height:600px; float:left;}
+    aside{width:30%; background:rgb(219, 233, 241); height:600px; float:left;}
+    section{height:299px;}
+    section>h3,section>p{padding:2%;}
+    aside>h3,aside>p{padding:5%;}
+
+    footer{width:100%; line-height:50px; background:rgb(158, 165, 167); text-align: center;}
+
+    @media all and (max-width:800px){
+      .gnb>li{width:33.333%;}
+    }
+    @media all and (max-width:640px){
+      article{width:100%;}
+      aside{width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>header</h1>
+      <h5>두번째 제목</h5>
+      <nav>
+        <ul class="gnb cf">
+          <li><a href="#">버튼1</a></li>
+          <li><a href="#">버튼2</a></li>
+          <li><a href="#">버튼3</a></li>
+          <li><a href="#">버튼4</a></li>
+          <li><a href="#">버튼5</a></li>
+          <li><a href="#">버튼6</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content cf">
+      <article>
+        <section>
+          <h3>article1</h3>
+          <p>article1의 본문</p>
+        </section>
+        <hr>
+        <section>
+          <h3>article2</h3>
+          <p>article2의 본문</p>
+        </section>
+      </article>
+      <aside>
+        <h3>aside</h3>
+        <p>aside 본문</p>
+      </aside>
+    </div>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>

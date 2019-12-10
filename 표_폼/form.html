@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin:0 auto; padding:0;}
+    #wrap{width:80%; margin:40px auto; background:#fff; border:5px rgb(240, 171, 182) dashed;}
+    body{background:#fbf9cc url(img/bg-stripe01.png) repeat-x;}
+    h1{text-align:center; padding:70px 0 0 0; color:rgb(102, 187, 151); font-size:2.5em;}
+    p{padding:30px 0 30px 70px;}
+    .entryForm{width:85%;}
+    .entryForm tr td:first-child {width:20%;}
+    .entryForm tr td:nth-child(2) {padding-left:20px;}
+    table,tr,td{border:1px solid rgb(240, 171, 182); line-height:40px; border-collapse: collapse;}
+    .entryForm input[type="text"]{width:60%; line-height:25px;}
+    .entryForm input[type="text"]:focus{background:rgb(255, 246, 226);}
+    .entryForm input{cursor: pointer;}
+    textarea{margin:15px 10px 0 0;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>고양이 사진 투고 양식</h1>
+    <p>필요한 사항을 기입한 후 투고 버튼을 눌러 주세요.</p>
+    <form id="entryForm" action="#" method="post">
+      <table class="entryForm">
+        <tr>
+          <td>고양이 이름：</td>
+          <td>
+            <input type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>주소：</td>
+          <td>
+            <select name="" id="">
+              <option value="1">가</option>
+              <option value="2">나</option>
+              <option value="3" selected>다</option>
+              <option value="4">라</option>
+              <option value="5">마</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>성별：</td>
+          <td>
+            <input type="radio" id="sex1" value="남자" name="sex">
+            <label for="sex1">남자</label>
+            <input type="radio" id="sex2" value="여자" name="sex">
+            <label for="sex2">여자</label>
+          </td>
+        </tr>
+        <tr>
+          <td>좋아하는 것：</td>
+          <td>
+            <label><input type="checkbox" name="like" id="like1">생선</label>
+            <label><input type="checkbox" name="like" id="like2">고기</label>
+            <label><input type="checkbox" name="like" id="like3">우유</label>
+            <label><input type="checkbox" name="like" id="like4">바삭바삭한 것</label>
+            <label><input type="checkbox" name="like" id="like5">고양이 통조림</label>
+            <label><input type="checkbox" name="like" id="like6">단것</label>
+          </td>
+        </tr>
+        <tr>
+          <td>사진：</td>
+          <td>
+            <input type="file">
+          </td>
+        </tr>
+        <tr>
+          <td>기르는 주인 이름：	</td>
+          <td>
+            <input type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>메일 주소：	</td>
+          <td>
+            <input type="email">
+          </td>
+        </tr>
+        <tr>
+          <td>코멘트：</td>
+          <td>
+            <textarea name="" id="" cols="80%" rows="10"></textarea>
+          </td>
+        </tr>
+      </table>
+      <input type="reset" value="초기화">
+      <input type="submit" value="전송">
+    </form>
+  </div>
+</body>
+</html>

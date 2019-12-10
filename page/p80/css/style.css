@@ -1,0 +1,86 @@
+@charset "utf-8";
+*{margin: 0 auto; padding:0;}
+ul,li{list-style-type: none;}
+a{text-decoration: none; color:inherit; padding:15px; display:inline-block;}
+
+.cf:after{content:""; clear:both; display:block;}
+
+body{font-family: "맑은 고딕", "고딕", "굴림";}
+#wrap{width:800px;}
+
+header{
+  width:100%;
+  height:150px;
+  background-color:#09f ;
+  background-image:url(../img/bg_han.png); 
+  background-repeat:no-repeat;  
+  background-position:right center;
+}
+header nav{
+  float:left;
+  width:70%;
+}
+
+nav ul li{float:left;}
+nav ul li a{color:white;}
+footer p{padding:20px;}
+h1{font-size:1.5em; color:#fff; padding:20px;}
+h3{font-size:1.0em;}
+p{font-size:12px;}
+
+section{
+  float:left;
+  width:580px;
+  padding:5px;
+}
+section article{
+  float:left;
+  width:250px;
+  height:220px;
+  margin:5px;
+  padding:10px;
+  border:1px solid #ccc;
+}
+/*  box-sizing이 기본값이므로 페딩이나 마진,보더값도 더해짐 */
+
+aside{
+  float:right;
+  width:200px;
+  text-align: center;
+}
+aside img{margin:10px;}
+
+footer{
+  clear:both;
+  width:800px;
+  margin-bottm:0;
+  background:#333;
+  color:white;
+  text-align: center;
+}
+
+.at1,.at2,.at3,.at4,li{
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  -ms-transition:1s;
+}
+.at1:hover{
+  background-color:#cf9;
+  border:1px solid green;
+}
+.at2:hover{
+  background-color:#a2d0ff;
+  border:1px solid blue;
+}
+.at3:hover{
+  background-color:#ebcbfe;
+  border:1px solid purple;
+}
+.at4:hover{
+  background-color:#fc3;
+  border:1px solid red;
+}
+li:hover{background:#fff;}
+a:hover{color:#06c;}

@@ -1,0 +1,31 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:inherit; text-align: center; display:block;}
+
+.cf:after{content:""; clear:both; display:block;}
+
+.gnb>li {float:left;}
+.gnb>li>a{
+  width:200px; line-height:40px; 
+  background:rgb(205, 240, 182); color:rgb(0, 0, 0);
+  border:1px rgb(95, 23, 23) dashed;
+}
+.sub>li>a{
+  width:200px; line-height:40px; 
+  background:rgb(197, 214, 255); color:rgb(0, 0, 0);
+  border:1px rgb(95, 23, 23) dashed;
+}
+
+/* .gnb li a:hover{background:black; color:white;} */
+/* 하나만 색 들어오게 하기 */
+
+li:hover>a{background:black; color:white;} 
+/* 위에거랑 같이 색 들어오게 하기 */
+
+.sub{display:none;}
+/* .gnb>li:hover .sub{display:block;} */
+/* 한줄씩 나오게 하기 */
+
+.gnb:hover .sub{display:block;}
+/* .sub리스트 전체 소환하기 */

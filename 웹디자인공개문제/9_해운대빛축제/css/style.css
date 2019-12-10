@@ -1,0 +1,83 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: inherit; text-align: center; display: block;}
+.cf:after{display:block; content:""; clear:both;}
+
+#wrap{width:1000px; height:650px;}
+.left{width:200px; height:650px; float:left;}
+.right{width:800px; height:650px; float:left;}
+.logo{width:200px; height:100px; background:silver;}
+.logo img {width:200px; height:40px; position:absolute; left:0px; top:30px;}
+nav{width:200px; height:550px; background:rgb(231, 231, 231)}
+.gnb {padding:10px;}
+.gnb li a {width:180px; line-height:40px; background:silver;}
+.gnb li:hover>a{background:black; color:white;}
+.sub{display:none;}
+
+#fade{width:800px; height:350px;}
+.fade__list {width:800px; height:350px;}
+.fade__item img {width:800px; height:350px;}
+.fade__item {
+  position:absolute; z-index:0;
+  transition:opacity 1.5s ease-in-out;
+  opacity:0;
+}
+.show {
+  z-index:1;
+  opacity:1;
+}
+
+#content{width:800px; height:200px;}
+#content section {float:left; width:246px; height:180px; padding:10px; border-right:1px solid black;}
+#content section:last-child {border:none;}
+
+.tab>li>a{width:123px; line-height:45px;}
+.tab>li>a:hover{background:black; color:white;}
+.tab>li{float:left;}
+
+.notice span{display:inline-block; line-height: 45px;}
+.notice span:nth-child(1){width:40px;}
+.notice span:nth-child(2){width:100px; text-align:left;}
+.notice span:nth-child(3){width:106px;}
+.notice a:hover{background:#69f;}
+
+.gallery {display:none;}
+.gallery img {width:70px;}
+.gallery>li {float:left; padding:6px; padding-top: 30px;}
+.gallery a:hover {opacity:0.5;}
+
+.banner img {width:246px; height:180px;}
+
+.shortcut img {width:70px;}
+.shortcut>li {float:left; padding:6px; padding-top: 54px;}
+.shortcut a:hover {opacity:0.5;}
+
+footer{width:800px; height:100px; background:silver;}
+.f__logo{width:200px; height:100px; float:left;}
+.f__logo img {position: relative; top:30px;}
+.f__right{width:600px; height:100px; float:left;}
+.f__right__top{width:600px; height:50px;}
+.f__right__bottom{width:600px; line-height:50px; text-align: center;}
+.fmenu>li{float:left;}
+.fmenu a{margin:0; width:200px; line-height:50px;}
+.fmenu a:hover{background: #69f;}
+
+.popup{
+  display:none;
+  border:2px solid black;
+  background:#fff;
+  width:600px; height:330px;
+  position:absolute;
+  z-index:100;
+  padding:10px;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+.popup h3, .popup p, .close{padding:10px; border:dashed 1px black;}
+.close{
+  position: relative;
+  left:50%;
+  transform:translateX(-50%);
+  margin-top:10px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width"> 반응형에 필수로 들어가야함 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{font-size:300px;}
+
+    .box1{display:block;}
+    .box2{display:none;}
+    .box3{display:none;}
+
+    @media all and (min-width:300px){
+      .box1{display:none;}
+      .box2{display:block;}
+      .box3{display:none;}
+    }
+    @media all and (min-width:600px){
+      .box1{display:none;}
+      .box2{display:none;}
+      .box3{display:block;}
+    }
+  </style>
+</head>
+<body>
+  <div class="box1 box">1</div>
+  <div class="box2 box">2</div>
+  <div class="box3 box">3</div>
+</body>
+</html>

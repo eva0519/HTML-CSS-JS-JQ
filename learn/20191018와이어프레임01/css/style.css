@@ -1,0 +1,71 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+ul,li{list-style: none;}
+a{
+  text-decoration: none; 
+  color:inherit; 
+  display:block; 
+  text-align: center;
+}
+.cf:after{content:""; clear:both; display:block;}
+
+#wrap{width:1200px; height:700px; background:gray;}
+header{width:100%; height:100px; background:lightcyan;}
+.logo{width:200px; height:100px; background:lightgray; float:left;}
+nav{width:1000px; height:100px; background:lightgoldenrodyellow; float:left;} 
+
+.gnb{float:right; margin:25px 20px 0 0;}
+.gnb>li{float:left; border:2px solid black;}
+
+.sub{display:none;}
+.gnb:hover .sub{display:block;}
+
+.gnb>li>a{width:160px; line-height:40px; background:#69f; color:#fff;}
+.gnb>li>a:hover{background:#36f;color:#fff; transition:all 0.6s;}
+
+.sub>li>a{width:160px; line-height:40px; background:rgba(0,0,0,.8); color:#fff;}
+.sub>li>a:hover{background:#fff;color:#000; transition:all 0.6s;}
+
+/* 슬라이드 */
+.slide{width:1200px; height:300px; background:#ccc; overflow:hidden;}
+.slide>ul>li:nth-child(1){width:1200px; height:300px; background:#a00;}
+.slide>ul>li:nth-child(2){width:1200px; height:300px; background:#0a0;}
+.slide>ul>li:nth-child(3){width:1200px; height:300px; background:#00a;}
+.slide>ul>li:nth-child(4){width:1200px; height:300px; background:#a00;}
+
+.slide>ul{animation:slide 8s infinite;}
+@keyframes slide{
+  0%{margin-top:0px;}
+  33%{margin-top:-300px;}
+  66%{margin-top:-600px;}
+  100%{margin-top:-900px;}
+}
+
+/* content */
+.notice{width:380px; height:180px; background:#aaa; padding:10px; float:left;}
+.banner{width:380px; height:180px; background:#ccc; padding:10px; float:left;}
+.link{width:380px; height:180px; background:#aaa; padding:10px; float:left;}
+
+/* notice */
+.tap>li>a{width:120px; line-height:36px; background:#69f; color:#fff;}
+.tap>li>a:hover{background:#36f; color:#fff; transition:all .6s;}
+.tap>li{float:left;}
+
+.t_notice span{display:inline-block;}
+.t_notice span:nth-child(1){width:50px; text-align: center; line-height: 36px;}
+.t_notice span:nth-child(2){width:210px; text-align: left; line-height: 36px;}
+.t_notice span:nth-child(3){width:100px; text-align: center; line-height: 36px;}
+.t_notice{background:#ddd;}
+.t_notice a:hover{background:lemonchiffon; transition:all .6s;}
+
+/* gallery */
+.gall img{width:120px; height:120px;} /* 포토샵에서 120x120으로 맞추면 할 필요 없음 */
+.gall li{width:120px; height:120px; margin-right:10px;}
+.gall li:last-child{margin:0;}
+.gall>li{float:left;}
+.gall{display:none;}
+
+/* footer */
+.f_logo{width:200px; height:100px; background:mediumaquamarine; float:left;}
+.copy{width:800px; height:100px; background:#ddf; float:left;}
+.sns{width:200px; height:100px; background:#fdd; float:left;}

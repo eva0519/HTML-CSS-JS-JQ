@@ -1,0 +1,25 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0; border:0;}
+ul,li{list-style: none;}
+img{vertical-align: top;}
+.slide,.slide2{width:300px; height:300px; overflow:hidden;} /* overflow 내용이 요소를 벗어났을때 어찌표시할지 정하는 속성 */
+/* 300,300 크기의 이미지를 사용했기 때문에 div에 속한 300x300 크기가 넘어가는 모든 요소는 hidden 안보이는 상태로 */
+.slide ul{animation:slide 8s infinite;}  /*ul에 애니메이션을 먹였기 때문에 ul에 속한 모든 이미지가 애니메이션으로 재생됨*/
+@keyframes slide{
+  0% {margin-top:0;}
+  33% {margin-top:-300px;}
+  66% {margin-top:-600px;}
+  100% {margin-top:-900px;}
+}
+/* from, to를 사용하지 않을때는 중간과정을 퍼센테이지로 표시한다 */
+
+.slide2>ul>li{float:left;}
+.slide2>ul:after{content:""; clear:"both"; display:block;}
+
+.slide2 ul{animation:slide2 8s infinite; width:1200px;}  /* 이미지 크기에 따라 width값을 꼭 넣어줘야 슬라이드가 계속 이어짐 */
+@keyframes slide2{
+  0%{margin-left:0;}
+  33%{margin-left:-300px;}
+  66%{margin-left:-600px;}
+  100%{margin-left:-900px;}
+}

@@ -1,0 +1,291 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>실습해 보자6_6</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<style>
+*{margin:0 auto; padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none; color:inherit;}/* 앵커 태그 글자 속성 */
+#wrap{width:90%;}
+header{background:#09f;}
+h1{padding:2%; color:#fff;}
+h3{padding:1% 0 0 2%;}
+h5{padding:0 0 1% 2%; color:#fff;}
+nav{background-color:#ccc;}
+nav li{float:left; padding:0.5%; margin:0;text-align:center; color:#333;}
+nav:after{content:""; clear:both; display:block;}/*clearfix*/
+article{ float:left;}
+section{width:100%; background-color:#eee;}
+aside{width:25%;}
+#content:after{content:""; clear:both; display:block;}/*clearfix*/
+footer{background:#666; color:#fff; width:100%;}
+p{padding:2%; text-align:center;}
+img{margin:2%;}
+#content{ background:#eee;}
+li:hover{background-color:#fff; color:#09f;}
+.left{float:left;}
+.right{float:right;}
+embed{max-width:100%;}
+@media all and (min-width:320px){
+    #page{display: block;}
+    .gnb{display: none;}
+nav{height:auto;}
+nav li{width:32.333%;}
+article{width:100%; border-top:1px #777 solid;border-bottom:1px #777 solid;}
+aside{width:100%;}}
+    
+@media all and (min-width:768px){
+    #page{display: none;}
+    .gnb{display: block;}
+nav li{float:left; padding:0.5%; margin:0;text-align:center; color:#777; width:15.666%;}
+aside{width:100%;}}
+@media all and (min-width:1024px){
+    article{ float:left; width:49.8%; 
+        border:0px;
+        border-left:1px #777 solid;border-right:1px #777 solid;}
+    aside{width:24.9%; float:right; }}
+    
+#toggle {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    #toggle div.bar,
+    #toggle div.bar:before,
+    #toggle div.bar:after {
+        width: 100%;
+        height: 3px;
+        background: #fff;
+    }
+
+    #toggle div.bar {
+        position: relative;
+        transform: translateY(9px);
+        transition: all 0.3s 0.3s ease;
+    }
+
+    #toggle div.bar:before {
+        content: " ";
+        position: absolute;
+        bottom: 9px;
+        transition: bottom 0.3s 0.3s ease, transform 0.3s ease;
+    }
+
+     #toggle div.bar:after {
+        content: " ";
+        position: absolute;
+        top: 9px;
+        transition: top 0.3s 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Animation */
+
+    #toggle div.bar.animate {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    #toggle div.bar.animate:after {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top 0.3s ease, transform 0.3s 0.3s ease;
+    }
+
+    #toggle div.bar.animate:before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+    }
+
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease, max-height 0s 0.6s ease;
+        z-index: 100;
+        opacity: 1;
+        background: rgba(0,0,0,0.5);
+        width:100%;
+        height: 300px;
+    }
+
+    #overlay nav {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;      
+        
+    }
+
+    #overlay nav ul,
+    #overlay nav ul li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        position: relative;
+        width:300px;
+    }
+
+     #overlay nav ul {
+        padding: 10px;
+     }
+
+     #overlay nav ul li {
+        margin-bottom: 10px;
+        opacity: 0;
+        transition: all 0.9s 0s ease;
+        margin-left: 60px;
+     }
+
+     #overlay nav ul li a {
+       position: relative;
+       line-height: 30px;
+       display: inline-block;
+       color: #ffffff;
+       transition: all 0.6s 0s ease;
+     }
+
+     #overlay nav ul li a:after {
+       content: " ";
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       width: 0;
+       opacity: 0;
+       height: 1px;
+       background: white;
+       transition: all 0.6s 0s ease;
+     }
+
+     #overlay nav ul li a:hover:after {
+       width: 100%;
+       opacity: 1;
+     }
+
+     #overlay nav ul li a:hover {
+       color: #888888;
+     }
+
+
+     #overlay nav ul li a {
+        text-transform: normal;
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+     }
+
+    #page.overlay #overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        max-height: 500px;
+        opacity: 1;
+        z-index: 100;
+        transition: all 0.3s ease;
+    }
+
+    #page.overlay #overlay nav ul li {
+
+      margin-left: 0;
+      opacity: 1;
+    }
+</style>
+</head><body>
+<div id="wrap">
+	<header>
+    	<h1>UI/UX 웹디자인 개발</h1>
+        <h5>UI구현</h5>
+        <nav class="gnb">
+        	<ul>
+            	<li><a href="#">버튼1</a></li>
+                <li><a href="#">버튼2</a></li>
+                <li><a href="#">버튼3</a></li>
+                <li><a href="#">버튼4</a></li>
+                <li><a href="#">버튼5</a></li>
+                <li><a href="#">버튼6</a></li>
+            </ul>
+        </nav>
+        
+    <div id="page">
+        <div id="toggle">
+            <div class="bar"></div>
+        </div>
+        <section id="overlay">
+            <nav>
+                <ul>
+                    <li><a href="#">버튼1</a></li>
+                    <li><a href="#">버튼2</a></li>
+                    <li><a href="#">버튼3</a></li>
+                    <li><a href="#">버튼4</a></li>
+                    <li><a href="#">버튼5</a></li>
+                    <li><a href="#">버튼6</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+        
+    </header>
+<div id="content">
+	<aside class="left">
+        <h3>UI 디자인</h3>
+        <p>UI 디자인이란??</p>
+    </aside>
+    <article>
+        <section>
+            <h3>이미지들</h3>
+            <p>
+            	<picture>
+                	<source srcset="img/a.jpg" media="(min-width:1024px)">
+                    <source srcset="img/a_200.jpg" media="(min-width:768px)">
+                    <source srcset="img/a_300.jpg" media="(min-width:320px)">
+                	<img src="img/a.jpg" alt="그림1">
+                </picture>
+                <picture>
+                	<source srcset="img/b.jpg" media="(min-width:1024px)">
+                    <source srcset="img/b_200.jpg" media="(min-width:768px)">
+                    <source srcset="img/b_300.jpg" media="(min-width:320px)">
+                	<img src="img/b.jpg" alt="그림1">
+                </picture>
+                <picture>
+                	<source srcset="img/c.jpg" media="(min-width:1024px)">
+                    <source srcset="img/c_200.jpg" media="(min-width:768px)">
+                    <source srcset="img/c_300.jpg" media="(min-width:320px)">
+                	<img src="img/c.jpg" alt="그림1">
+                </picture>                
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h3>동영상</h3>
+            <p>
+            	<embed src="img/park.mp4" width="460px" height="250px">
+                
+            </p>
+            
+        </section>
+    </article>
+    <aside class="right">
+        <h3>UI 디자인</h3>
+        <p>UI 디자인이란??</p>
+    </aside>
+</div>
+    <footer><p>한양직업전문학교 UI/UX 웹디자인 개발 &copy;제갈강 </p></footer></div>
+    <script>
+        $('#toggle').click(function() {
+            $('#toggle .bar').toggleClass('animate');
+            $('#page').toggleClass('overlay');
+        });
+    </script>
+</body>
+</html>

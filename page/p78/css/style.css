@@ -1,0 +1,40 @@
+@charset "utf-8";
+*{box-sizing: border-box; margin:0 auto;}
+
+body{background: url(../img/bg1.jpg); background-size: cover; background-position: center center;}
+.wrap{width: 80%; font-family: arial; padding: 10px; background:#f1f1f1;}
+.header{padding:30px; text-align: center; background:white;}
+.header h1{font-size: 50px;}
+
+.topnav{overflow:hidden; background:#333;}  /* 오버플로우를 하면 고쳐지는 이유 이해안감. 클리어픽스랑 같은 효과 */
+.topnav a{
+    float:left;
+    display:block;
+    color:#f2f2f2;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover{background:#ddd; color:black;}
+
+.leftcolumn{float:left; width:75%;}
+.rightcolumn{float:left; width:25%; background:#f1f1f1; padding-left:20px;}
+.row:after{content:""; clear:both; display:block;}
+
+.fakeimg{width:100%; padding:20px; 
+        background:url(../img/bg2.jpg); 
+        background-size:cover; 
+        background-position:center center;
+}
+
+.card{background: white; padding:20px; margin-top:20px;}
+
+.footer{padding:20px; text-align:center;background:#ddd; margin-top:20px;}
+
+@media screen and (max-width:800px){
+    .leftcolumn,.rightcolumn{width:100%; padding:0;}
+}
+
+@media screen and (max-width:400px){
+    .topnav a{float:none; width:100%;}
+}

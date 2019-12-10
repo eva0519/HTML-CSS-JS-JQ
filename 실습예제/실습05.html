@@ -1,0 +1,136 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>실습해 보자4</title>
+<style>
+*{margin:0 auto; padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none; color:inherit;}/* 앵커 태그 글자 속성 */
+html,body,#wrap,aside,#content,article{height:100%;}
+
+h1{padding:20px; color:#fff;}
+h3{padding:10px 0 0 20px;}
+h5{padding:0 0 10px 20px; color:#fff;}
+p{padding:20px; text-align:center;}
+
+#wrap{width:800px;}
+header{background:#09f; position:fixed;}/* header fixed */
+article{ float:left; }
+section{width:500px; background-color:#eee;}
+aside{width:150px; }
+#content{ background:#eee; padding-top:143px;}/* 공간확보 */
+#content:after{content:""; clear:both; display:block;}/*clearfix*/
+footer{background:#666; color:#fff; width:800px;}
+
+nav{background-color:#ccc;}
+nav li{float:left; padding:5px; margin:0;text-align:center; color:#333; width:150px;}
+nav li:hover{background-color:#fff; color:#09f;}
+nav:after{content:""; clear:both; display:block;}/*clearfix*/
+
+img{margin:20px;}
+img:hover{opacity:0.5;}
+
+.left{float:left; background:#fff;}
+.right{background:url(img/bg.gif);float:right;}
+
+.sub li{width:150px; padding:5px 0; text-align:center; font-size:0.9em;}
+.sub li:hover{background-color:#09f; color:#fff;}
+
+.g_sub{display:none;}
+.g_sub{position:absolute; z-index:1; background-color:rgba(0,0,0,0.8); width:160px; margin-top:5px; margin-left:-5px;}
+.g_sub li{color:#fff; }
+.gnb:hover li>ul{display:block;}
+.gnb li:hover{background-color:#ccc; color:#000;}
+</style>
+</head>
+<body>
+<div id="wrap">
+	
+    <header>
+    	<h1>UI/UX 웹디자인 개발</h1>
+        <h5>UI구현</h5>
+        <nav>
+        	<ul class="gnb">
+            	<li><a href="#">버튼1</a>
+                	<ul class="g_sub">
+                    	<li><a href="#">btn_S1</a></li>
+                        <li><a href="#">btn_S2</a></li>
+                        <li><a href="#">btn_S3</a></li>
+                        <li><a href="#">btn_S4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼2</a>
+                	<ul class="g_sub">
+                    	<li><a href="#">btn_S1</a></li>
+                        <li><a href="#">btn_S2</a></li>
+                        <li><a href="#">btn_S3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼3</a>
+                	<ul class="g_sub">
+                    	<li><a href="#">btn_S1</a></li>
+                        <li><a href="#">btn_S2</a></li>
+                        <li><a href="#">btn_S3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼4</a>
+                	<ul class="g_sub">
+                    	<li><a href="#">btn_S1</a></li>
+                        <li><a href="#">btn_S2</a></li>
+                        <li><a href="#">btn_S3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼5</a>
+                	<ul class="g_sub">
+                    	<li><a href="#">btn_S1</a></li>
+                        <li><a href="#">btn_S2</a></li>
+                        <li><a href="#">btn_S3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="content">
+        
+        <aside class="left">
+            <ul class="sub">
+                <li><a href="#">S_버튼1</a></li>
+                <li><a href="#">S_버튼2</a></li>
+                <li><a href="#">S_버튼3</a></li>
+                <li><a href="#">S_버튼4</a></li>
+                <li><a href="#">S_버튼5</a></li>
+            </ul>
+        </aside>
+        
+        <article>
+            <section>
+                <h3>이미지들</h3>
+                <p>
+                    <img src="img/a.jpg" alt="그림1">
+                    <img src="img/b.jpg" alt="그림2">
+                    <img src="img/c.jpg" alt="그림3">
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h3>동영상</h3>
+                <p>
+                    <embed src="img/park.mp4" width="460px" height="250px">
+                </p>
+            </section>
+        </article>
+        
+        <aside class="right">
+            <h3>UI 디자인</h3>
+            <p>UI 디자인이란??</p>
+        </aside>
+    </div>
+    
+    <footer>
+    	<p>한양직업전문학교 UI/UX 웹디자인 개발 &copy;제갈강 </p>
+    </footer>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@charset "utf-8";
+* {margin:0 auto; padding:0;}
+ul,li {list-style:none;}
+a {text-decoration:none; color:inherit; display:block; text-align: center;}
+.cf:after {display:block; content:""; clear:both;}
+#bg{
+    background:rgba(0,0,0,0.5) fixed;
+    background-size:cover;
+    display:none;
+    width:100%; height:100%;
+    z-index:50;
+    position:absolute;
+}
+
+body{background:#f2f2f2;}
+#wrap{width:1200px; height:700px; background:#fff;}
+header{width:1200px; height:100px;}
+.logo{width:200px; height:100px; float:left;}
+.logo img{position:relative; top:30px;}
+nav{width:1000px; height:100px; float:left;}
+
+.gnb{position:relative; top:60px; left:330px;}
+.gnb>li{float:left;}
+.gnb li a{width:160px; line-height:40px; color:#333;}
+.gnb li:hover>a{background:#ffc000;}
+.sub{display:none; position:absolute; z-index:3;}
+.navBack{
+    width:1200px; height:160px;
+    display:none; position:absolute; z-index:2;
+    background:rgba(255,255,255,0.5);
+}
+
+.fadeList {width:1200px; height:300px;}
+.fadeItem {
+    position:absolute;
+    z-index:0;
+    opacity:0;
+    transition:opacity 1.5s ease-in-out;
+}
+.fadeItem img {width:1200px; height:300px;}
+.showSlide {
+    z-index:1;
+    opacity:1;
+}
+
+/* content */
+section{width:380px; height:180px; padding:10px; float:left;}
+.tab>li>a{
+    width:380px; line-height:44px; text-align:center;
+    border-bottom:1px #333 solid;
+}
+.notice>li>a:hover{background:#ff5050; color:#fff;}
+.notice>li>a>span{display:inline-block; line-height:45px;}
+.notice>li>a>span:nth-child(1){width:60px;}
+.notice>li>a>span:nth-child(2){width:200px; text-align: left;}
+.notice>li>a>span:nth-child(3){width:120px;}
+
+#content img{width:100px;}
+.gall>li>a{padding:10px;}
+.gall>li{float:left;}
+.gall{padding:8px 10px 7px 10px;}
+
+.linkList>li>a{padding:10px;}
+.linkList>li{float:left;}
+.linkList{padding:8px 10px 7px 10px;}
+.linkList img:hover{opacity:0.6;}
+
+/* footer */
+.left{width:1000px; height:100px; float:left;}
+.right{float:left; width:200px; line-height:100px;}
+.fMenu, .copy{width:1000px; line-height:50px; text-align: center;}
+.fMenu a{display:inline-block;}
+.fMenu a:hover{color:#fff;}
+footer{background:#999;}
+
+#popUp {
+    display:none;
+    position:absolute;
+    z-index:100;
+    top:50%; left:50%;
+    transform:translate(-50%,-70%);
+    background:rgba(255, 255, 255, 0.774);
+    border:3px double black;
+    width:600px; height:350px;
+}
+#popUp>h3, #popUp>p, .close {padding:10px;}
+#popUp>h3 {text-align: center;}
+#popUp>p {border:2px dashed black;} 
+.close{
+    position:relative;
+    left:50%;
+    transform:translate(-50%,30%);
+}

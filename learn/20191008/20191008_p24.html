@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h3>색상입력</h3>
+  <input type="color"/>
+  <h3>숫자입력</h3>
+  <input type="number" min="0" max="50" step="1" value="20"/>
+  <h3>범위입력</h3>
+  <p>0.1mm <input type="range" min=1 max=10 value=10/> 0.5mm
+  <h3>고급입력</h3>
+  참가국 : <input type="text" size="12" list="country"/>
+  <datalist id="country">
+    <option value="스페인"/>
+    <option value="영국"/>
+    <option value="독일"/>
+  </datalist>
+  <h3>자동계산출력</h3>
+  금액 : 
+  <input type="number" name="price" min="0" step="100" value="0" /> 원 x
+  <input type="number" name="num" min="0" step="1" value="0" /> 권 =
+  <output onForminput="value = price.valueAsNumber * num.valueAsNumber + '원' " />  <!--html5부터 지원안됨. 오페라에서만 사용가능-->
+  </body>
+</html>

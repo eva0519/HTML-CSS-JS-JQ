@@ -1,0 +1,39 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+ul,li{list-style:none;}
+#wrap{width:90%;}
+header{background:#09f;}
+h1{padding:2%; color:#fff;}
+h5{padding: 0 0 1% 2%; color:#fff;}
+nav{background: #ccc;}
+nav li{float:left; padding:0.5%; margin:0; text-align: center; color:#333; width:15.6%}
+nav:after{content:""; clear:both; display:block;}
+article{float:left; width:70%;}
+aside{width: 30%; float:right;}
+section{width:100%; background: #eee;}
+h2{padding:1% 0 0 2%;}
+h3{padding:1% 0 0 2%;}
+#content:after{content:""; clear:both; display:block;}
+footer{background: #666; color:#fff; width:100%;}
+p{padding:2%;}
+
+@media all and (min-width:320px){
+  nav{height:auto;}
+  nav li{width:32%}
+  article{width:100%;}
+  aside{width:100%;}
+}
+/* 창의 가로폭이 최소 320px 이하일때  */
+@media all and (min-width:768px){
+  nav li{float:left; padding:0.5%; margin:0; text-align: center; color:#333; width:15.6%;}
+  article{width:100%;}
+  aside{width:100%;}
+}
+/* 창의 가로폭이 최소 768px 이하일때  */
+
+@media all and (min-width:1024px){
+  nav li{float:left; padding:0.5%; margin:0; text-align: center; color:#333; width:15.6%;}
+  article{float:left; width:70%;}
+  aside{width:30%; float:right;}  
+}
+/* 창의 가로폭이 최소 1024px 이하일때  */

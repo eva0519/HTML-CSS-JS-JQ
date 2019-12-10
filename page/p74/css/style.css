@@ -1,0 +1,26 @@
+@charset "utf-8";
+div{width:300px; height:300px; background: #09f;}
+
+.img1{animation-name:move; animation-duration:3s;}
+@keyframes move{
+  from{margin-left:0;}
+  to{margin-left:300px;}
+}
+
+.img2{animation-name: fade; animation-duration: 3s;}
+@keyframes fade{
+  from{opacity:1;}
+  to{opacity:0.1;}
+}
+
+.img3{animation:inf 3s alternate infinite;}
+@keyframes inf{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+.img4{animation:trans 3s linear alternate infinite;}  /* name duration timing-fuction direction interation-count 묶어서 사용하는게 맘편함 */
+@keyframes trans{
+  from{transform:rotate(0deg) translate(0);}
+  to{transform:rotate(360deg) translate(600px); background:#ff0;}
+}

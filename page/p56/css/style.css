@@ -1,0 +1,39 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:inherit;}
+html,body,#wrap,aside,#content,article{height:100%;}
+
+h1{padding:20px; color:#fff;}
+h3{padding:10px 0 0 20px;}
+h5{padding:0 0 10px 20px; color:#fff;}
+p{padding:20px; text-align: center;}   /* 이미지나 동영상파일 p문단에 넣어서 중앙정렬 */
+
+#wrap{width:800px;}
+header{background: #09f; position:fixed;}
+article{float:left;}
+section{width:500px; background: #eee;}
+aside{width:150px;}
+#content{background: #eee; padding-top: 143px;}
+#content:after{clear:both; display:block; content:"";}
+footer{background: #666; color:#fff; width:800px;}
+
+nav{background: #ccc;}
+nav li{float:left; padding:5px; margin:0; text-align: center; color: #333; width:150px;}
+nav li:hover{background-color: #fff; color:#09f;}
+nav:after{content:""; clear:both; display:block;}
+
+img{margin:20px;}
+img:hover{opacity:0.5;}
+
+.left{float:left; background-color: #fff;}
+.right{float:right; background:url(../img/bg.gif);}
+
+.sub li{width:150px; padding:5px 0; text-align: center; font-size: 0.9em;}
+.sub li:hover{background-color:#09f; color: #fff;}
+
+.g_sub ul{display:none;}
+.g_sub ul{position: absolute; z-index:1; background-color: rgba(0,0,0,0.8); width:160px; margin-top:5px; margin-left:-5px;}
+.g_sub ul li{color:#fff;}
+.g_sub:hover>ul{display:block;}
+.g_sub ul li:hover{background-color: #ccc; color:#000;}

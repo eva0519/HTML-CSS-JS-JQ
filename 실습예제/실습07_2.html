@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>실습해 보자7_2</title>
+<style>
+div{width:300px; height:300px; background:#09f;}
+
+.img1{animation-name:move; animation-duration:3s;}
+
+@keyframes move{
+from{margin-left:0;}
+to{margin-left:300px;}
+}
+
+.img2{animation-name:fade; animation-duration:3s;}
+
+@keyframes fade{
+from{opacity:1;}
+to{opacity:0.1;}
+}
+.img3{
+
+animation:inf 3s alternate infinite;
+}
+
+@keyframes inf{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+.img4{animation-name:trans; animation-duration:3s;}
+
+@keyframes trans{
+from{transform:rotate(0deg) translate(0);}
+to{transform:rotate(360deg) translate(600px); background:#ff0;}
+}
+
+</style>
+</head>
+
+<body>
+<img src="img/a_300.jpg" class="img1">
+<div class="img2"></div>
+<img src="img/a_300.jpg" class="img3">
+<div class="img4"></div>
+</body>
+</html>

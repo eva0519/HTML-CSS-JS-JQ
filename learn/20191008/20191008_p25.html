@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>색상 및 숫자 입력 예제</title>
+</head>
+<body>
+  <h3>색상 및 숫자 입력 예제</h3>
+  <form method="GET" action="form_app.js">
+    <p>표지색상 : <input type="color"/>
+    <p>제작권수 : <input type="number" min="-100" max="100" step="10" value="20"/>
+    <p>표지두께 : 0.1mm <input type="range" min="1" max="5" value="3"/> 0.5mm
+  </form>
+  <br>
+  <h2>추가된 입력 요소 예제</h2>
+  <form oninput="result.value=parseInt(price.value)*parseInt(num.value)">
+    <h3>도서 구입 요청</h3>
+    도서명 : <input type="text" list="titles" name="book"/>
+    <datalist id="titles">
+      <option value="멀티미디어배움터" label="30,000"/>
+      <option value="인터넷배움터" label="34,000"/>
+      <option value="컴퓨터와 IT 기술의 이해" label="28,000"/>
+    </datalist>
+      <p>선호도 : 1 <input type="range" min="1" max="5" value="3" /> 5
+      <p>가격 : <input type="number" name="price" min="0" step="100"value="10000"/> 원
+      <p>권수 : <input type="number" name="num" min="0" step="1" value="0" /> 권
+      <p>합계 : <output name="result" for="price num"/></output>
+
+      <p>암호화 <keygen name="key" keytype="rsa"></keygen>   <!--더 이상 사용되지 않음-->
+      <p><input type="submit" value="구입"/>
+  </form>
+</body>
+</html>

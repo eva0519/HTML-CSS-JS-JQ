@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>실습해 보자7_3</title>
+<style>
+*{margin:0 auto; padding:0; border:0;}
+ul,li{list-style:none;}
+img{vertical-align:top;}
+div{width:300px; height:300px; overflow:hidden;}
+.slide ul{animation:slide 8s infinite;}
+@keyframes slide{
+0% {margin-top:0;}
+33% {margin-top:-300px;}
+66% {margin-top:-600px;}
+100% {margin-top:-900px;}
+}
+
+.slide2 ul{animation:slide2 8s infinite;}
+@keyframes slide2{
+0% {margin-left:0;}
+33% {margin-left:-300px;}
+66% {margin-left:-600px;}
+100% {margin-left:0;}
+}
+</style>
+</head>
+
+<body>
+<div class="slide">
+	<ul>
+		<li><img src="img/a_300.jpg" ></li>
+		<li><img src="img/b_300.jpg" ></li>
+		<li><img src="img/c_300.jpg" ></li>
+        <li><img src="img/a_300.jpg" ></li>
+	</ul>
+</div>
+
+<div class="slide2">
+	<ul>
+		<li><img src="img/slide.jpg" ></li>
+	</ul>
+</div>
+
+</body>
+</html>

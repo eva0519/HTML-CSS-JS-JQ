@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Form handling with JavaScript </title>
+    <link rel="stylesheet" type="text/css" href="style-size.css"/>
+    <link rel="stylesheet" type="text/css" href="style-layout.css"/>
+    <link rel="stylesheet" type="text/css" href="style-presentation.css"/>
+</head>
+<body id="order">
+    <h2>서적 주문 양식</h2>
+    <form action="">
+        <p></p>
+        <table border="1">
+            <tr>
+                <th>책 제목</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>합계</th>
+            </tr>
+            <tr>
+                <td> 멀티미디어 배움터 2.0 </td>
+                <td> 25,000원 </td>
+                <td>
+                    <input type="text" id="book1" size="2" value="0" onclick="this.select();"></td>
+                    <td><input type="text" id="book1total" size="6" value="0"> 원</td>
+            </tr>
+            <tr>
+                <td> 모바일 멀티미디어 </td>
+                <td> 27,000원 </td>
+                <td>
+                    <input type="text" id="book2" size="2" value="0" onclick="this.select();"></td>
+                    <td><input type="text" id="book2total" size="6" value="0"> 원</td>
+            </tr>
+            <tr>
+                <td> 자바입문 : 이론과 실습 </td>
+                <td> 25,000원 </td>
+                <td>
+                    <input type="text" id="book3" size="2" value="0" onclick="this.select();"></td>
+                    <td><input type="text" id="book3total" size="6" value="0"> 원</td>
+            </tr>
+            <tr>
+                <td> 합계 </td>
+                <td> &nbsp; </td>
+                <td>
+                    <input type="text" id="totalNumber" size="2" value="0"></td>
+                    <td><input type="text" id="totalPrice" size="6" value="0"> 원</td>
+            </tr>
+        </table><br/>
+        <input type="button" value="합계계산" onclick="updateAll();"/>
+        <input type="reset" value="초기화"/>
+    </form>
+    <script type="text/JavaScript">   /* js 문법의 경우 함수 대소문자까지 완벽해야함 */
+    function updateAll() {
+        var n1 = document.getElementById("book1").value;
+        var n2 = document.getElementById("book2").value;
+        var n3 = document.getElementById("book3").value;
+        var p1 = 25000 * n1;
+        var p2 = 27000 * n2;
+        var p3 = 25000 * n3;
+        document.getElementById("book1total").value = p1;
+        document.getElementById("book2total").value = p2;
+        document.getElementById("book3total").value = p3;
+        var totalNumber = parseInt(n1) + parseInt(n2) + parseInt(n3);
+        document.getElementById("totalNumber").value = totalNumber;
+        var totalPrice = p1 + p2 + p3;
+        document.getElementById("totalPrice").value = totalPrice;
+    }
+    </script>
+</body>
+</html>

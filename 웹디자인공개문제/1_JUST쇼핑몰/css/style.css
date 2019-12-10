@@ -1,0 +1,158 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0; color:#222328;}
+ul,li {list-style:none;}
+a {text-decoration: none; color:inherit; text-align: center; display:block;}
+.cf:after{content:""; clear:both; display:block;}
+
+#wrap{width:1204px;  border:2px #333 dotted; position:relative;}
+.logo{width:200px; height:100px; float:left;}
+nav{width:1000px; height:100px;  float:left;}
+.logo>a{position:relative; top:30px;}
+
+.gnb>li>a{width:160px; line-height:40px; }
+.sub>li>a{width:160px; line-height:40px; background:#f5f6fae8;}
+.gnb li:hover>a{background:#353b488e; color:#f5f6fa;}
+
+.gnb>li{float:left;  border:1px #333 solid; border-right:none;}
+.gnb>.btn4{border-right:1px #333 solid;}
+.sub{display:none; position:absolute; z-index:2;}
+/* .gnb:hover .sub{display:block;} */
+
+.gnb{position: relative; top:30px; left:320px;}
+
+
+
+/* content */
+#content{width:1200px; height:200px; }
+#content>section{width:380px; height:180px; padding:10px; float:left;}
+
+.tap>li>a{line-height:45px; border:1px #333 solid; border-bottom:none;}
+#note{border-right:none; width:90px; margin-left:10px;}
+#gall{width:70px;}
+.tap>li>a:hover{background:#353b48; color:#f5f6fa;}
+.tap>li{float:left;}
+
+.notice span{display:inline-block;}
+.notice span:nth-child(1){width:60px; line-height:43px;}
+.notice span:nth-child(2){width:198px; line-height:43px; text-align: left;}
+.notice span:nth-child(3){width:120px; line-height:43px;}
+.notice>a:hover{background:#353b48; color:#f5f6fa;}
+.notice>a{border:1px #333 solid; border-bottom:none; }
+.notice>a:last-child{border-bottom:1px #333 solid;}
+
+.gall {display:none;  border:1px #333 solid;}
+.gall>li{float:left; padding :6px 3px 3px 3px;}
+.gall>li:hover{background:white; transition:all .5s}
+
+/* 배너 */
+#fade{
+    width:340px; height:180px; overflow:hidden;
+    padding:0 20px;
+}
+#fade>ul{animation:fade 6s infinite;}
+@keyframes fade{
+    0%{margin-top:0px; opacity:0;}
+    3%{margin-top:0px; opacity:1;}
+    47%{margin-top:0px; opacity:1;}
+    50%{margin-top:0px; opacity:0;}
+
+    53%{margin-top:-180px; opacity:0;}
+    56%{margin-top:-180px; opacity:1;}
+    97%{margin-top:-180px; opacity:1;}
+    100%{margin-top:-180px; opacity:0;}
+}
+
+/* 바로가기 */
+.link{width:380px; height:180px;}
+.link>li{float:left; margin-right:6px;}
+.link>li:last-child{margin:none;}
+.link>li>a{width:118px; height:170px; border:1px #333 solid;}
+
+/* footer */
+footer{width:1200px; height:100px; border-top : 1px #333 dotted;}
+.f_logo{width:200px; height:100px; float:left; }
+.f_logo>a{position: relative; top:30px;}
+.copyright{width:800px; line-height:100px; float:left; text-align: center;}
+.sns{width:200px; height:100px; float:left; }
+
+.box{
+    width:60px; height:60px; 
+    border-radius:50%; border:1px solid #333;
+    background:url(../img/sns.png) no-repeat;
+    float:left;
+    margin:20px 0 0 4px;
+}
+
+
+/* 자바스크립트 */
+
+#s1{background-position:22px 14px;}
+#s2{background-position:-30px 14px;}
+#s3{background-position:-93px 11px;}
+
+.aa1{width:300px; position:absolute; z-index:2; top:285px; border:3px white solid; transition:all .7s;}
+#clock{
+    position:absolute; z-index:8; top:93px; left:10px;
+} 
+
+.clockDetail {font-size:0.6em; color:#fff;}
+
+#autoText {
+    font-family:'Nanum Pen Script', "맑은 고딕"; 
+    font-size:2.5em; position: absolute; z-index:10;
+    text-align: center;
+    width:1200px;
+    line-height:150px;
+}
+
+#slide ul li img{
+    width:1200px; height:300px;
+}
+.slideNum {
+    position:absolute; z-index:0;
+    transition:all 0.5s ease-in-out;
+    opacity:0;
+    transform: scale(0.9);
+}
+.showSlide {
+    z-index:1;
+    opacity:1;
+    transform: scale(1);
+}
+#slide {
+    width:1200px; height:300px; display:relative;
+}
+#slideButton{
+    display:absolute; z-index:5;
+}
+
+/* #slide>ul {animation:slide 9s infinite;}
+@keyframes slide {
+    0%{margin-top:0px}
+    33%{margin-top:-300px}
+    66%{margin-top:-600px}
+    100%{margin-top:-900px}
+} */
+
+
+
+/* 제이쿼리 */
+
+#popup {
+    width:600px; height:400px; background:white;
+    border:3px black double;
+    position:absolute; z-index:32;
+    left:0; top:0;
+    left:50%; top:40%;
+    transform:translate(-50%,-50%);
+    display:none;
+}
+
+#popup h3 {width:100%; line-height: 50px; text-align: center;}
+#popup p {padding:5%; width:90%;}
+.close {
+    width:80px; line-height:30px; text-align: center; 
+    position:relative; left:50%;
+    transform:translateX(-50%);
+}
+

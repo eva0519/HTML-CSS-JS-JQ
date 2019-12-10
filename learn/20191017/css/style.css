@@ -1,0 +1,55 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0}
+ul,li{list-style: none;}
+#wrap{width:1200px; background:honeydew;}
+header{width:100%; height:200px; background:khaki;}
+
+#slide{width:100%; height:300px; overflow:hidden;}
+#slide>ul{animation:slide 8s infinite;}
+
+/* @keyframes slide{
+  0%{margin-top: 0;}
+  
+  25%{margin-top:-300px; opacity:1;}
+  29%{margin-top:-280px; opacity:.3;}
+  33%{margin-top:-300px; opacity:1;}
+
+  58%{margin-top:-600px; opacity:1;}
+  62%{margin-top:-580px; opacity:.3;}
+  66%{margin-top:-600px; opacity:1;}
+  
+  92%{margin-top:-900px; opacity:1;}
+  96%{margin-top:-880px; opacity:.3;}
+  100%{margin-top:-900px; opacity:1;}
+}
+ */
+@keyframes slide{
+  0%{margin-left: 0;}
+
+  27%{margin-left:0px; opacity:1;}
+  30%{margin-left:0px; opacity:0;}
+  31%{margin-left:-1200px; opacity:0;}
+  33%{margin-left:-1200px; opacity:1;}
+
+  60%{margin-left:-1200px; opacity:1;}
+  63%{margin-left:-1200px; opacity:0;}
+  64%{margin-left:-2400px; opacity:0;}
+  66%{margin-left:-2400px; opacity:1;}
+
+  94%{margin-left:-2400px; opacity:1;}
+  97%{margin-left:-2400px; opacity:0;}
+  98%{margin-left:-3600px; opacity:0;}
+  100%{margin-left:-3600px; opacity:1;}
+}
+/* 오른쪽으로 이동하는 슬라이드 + 오퍼시티값 추가시 페이드인아웃 방식으로 하는법 */
+
+#slide>ul>li{float:left;}
+#slide>ul:after{content:""; clear:both; display:block;}
+#slide>ul{width:400%;}  
+/* 옆으로 슬라이드 할 때 추가되는 코드들 */
+
+#slide>ul>li:nth-child(1){width:1200px; height:300px; background:#69f;}
+#slide>ul>li:nth-child(2){width:1200px; height:300px; background:#f63;}
+#slide>ul>li:nth-child(3){width:1200px; height:300px; background:#6f3;}
+#slide>ul>li:nth-child(4){width:1200px; height:300px; background:#69f;}
+

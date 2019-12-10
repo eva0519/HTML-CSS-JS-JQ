@@ -1,0 +1,45 @@
+@charset "utf-8";
+.img1:hover{transform: translate(100px); transition:all 2s;}
+
+.img2{
+  width:300px; height:300px; background: #09f;
+  transition-property:width,height,transform,border;
+  transition-duration:1s,2s,3s,4s;
+}  /* transition 단축속성만 사용하는것이 아닐시 duration 속성을 무조건 같이 넣어줘야함. 
+      transition:property,duration,timing-funtion,delay */
+
+.img2:hover{width:200px; height:200px; transform:rotate(45deg); border:10px #f00 solid;}
+
+.img3{
+  transition-property:transform, border;
+  transition-duration:1s, 5s;
+}
+
+.img3:hover{transform:rotate(45deg); border:10px #f00 solid;}
+
+.img4{
+  width:300px; height:300px; background:#09f;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+
+  transition-delay: 1s; /* delay가 나중에 와야함. 트렌지션 시작 지점 설정. 현재의 경우 1초후 시작. */
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -ms-transition-delay: 1s;
+  -o-transition-delay: 1s;
+}
+/* 앞에붙는-webkit-등은 브라우저 접두어. wekit크롬,사파리 moz파이어폭스 o오페라 ms익플 */
+
+.img4:hover{
+  transform:rotate(45deg) scale(1.5,1.5);
+  background:#ff0;
+  -webkit-transform: rotate(45deg) scale(1.5,1.5);
+  -moz-transform: rotate(45deg) scale(1.5,1.5);
+  -ms-transform: rotate(45deg) scale(1.5,1.5);
+  -o-transform: rotate(45deg) scale(1.5,1.5);
+}
+/* delay 값이 들어가있는 상태이기 때문에 브라우저가 틀어진후 1초후에 트렌지션이 시작되어 나타나고, 마우스오버시 1초 후에
+트렌스폼이 실행됨. delay값 삭제시 즉시실행 */

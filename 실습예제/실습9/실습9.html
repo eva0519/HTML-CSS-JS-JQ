@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>실습9</title>
+<style>
+*{margin:0 auto; padding:0}
+ul,li{list-style:none;}
+a{text-decoration:none; color:inherit; padding:15px; display:inline-block;}
+body{
+	font-family:"맑은 고딕", "고딕", "굴림";
+}
+#wrap{
+	width:800px;
+}
+header {
+	width: 100%;
+	height: 150px;
+	background-color: #09f;
+	background-image: url(img/bg_han.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+header nav {
+	float: left;
+	width:70%;
+}
+nav ul li{
+	float: left;
+}
+nav ul li a{
+	color:white;
+}
+footer p {
+	padding:20px;
+}
+h1{font-size:1.5em; color:#fff; padding:20px;}
+h3 {font-size:1.0em;}
+p {
+	line-height:20px;
+	font-size:12px;
+}
+section {
+  float:left;
+  width:580px;
+  padding:5px;
+}
+section article{
+	float:left;
+	width:250px;
+	height:220px;	
+	margin:5px;
+	padding:10px;	
+	border:1px solid #ccc;
+}
+aside{
+  float:right;
+  width:200px;
+  text-align:center;
+}
+aside img{margin:10px;}
+footer{
+	clear:both;
+	width: 800px;
+	margin-bottom:0;
+	background-color:#333;
+	color:white;	
+	text-align:center;
+}
+.at1, .at2, .at3, .at4, li {
+	transition:1s;
+	-webkit-transition:1s;
+	-moz-transition:1s;
+	-o-transition:1s;
+	-ms-transition:1s;
+}
+.at1:hover{
+	background-color:#cf9;
+	border:1px solid green;
+}
+.at2:hover{
+	background-color:#a2d0ff;;
+	border:1px solid blue;
+}
+.at3:hover{
+	background-color:#ebcbfe;
+	border:1px solid purple;
+}
+.at4:hover{
+	background-color:#fc3;
+	border:1px solid red;
+}
+li:hover{background:#fff;}
+a:hover{color:#06c;}
+
+</style>
+</head>
+<body>
+<div id="wrap">
+<header>
+	<h1>UI/UX 웹디자인 개발</h1>
+  <nav>
+    <ul>
+      <li><a href="#">UI 디자인</a></li>
+      <li><a href="#">UI/UX 가이드 제작</a></li>
+      <li><a href="#">UI 구현</a></li>
+      <li><a href="#">UI 테스트</a></li>
+    </ul>
+  </nav>
+</header>
+<section>
+  <article class="at1">  
+    <h3>UI 디자인 </h3>
+     <p>UI 디자인이란 UI 아키텍처 설계 후 시각적인
+요소를 디자인하기 위해 비주얼 디자인 콘셉트를
+도출하며 이 콘셉트에 근거하여 GUI를 상세 디자
+인하는 능력이다.</p>
+  </article>
+  <article class="at2"> 
+    <h3>UI/UX 가이드 제작 </h3>
+    <p>UI/UX 가이드 제작이란 UI/UX 콘셉트, 콘텐츠,
+정보 구조, 워크플로우, 서비스 정책, 디자인 산출
+물을 파악하여 SW 개발을 위한 UI/UX 가이드를
+제작하고 공유하는 능력이다.</p>
+   </article>
+   <article class="at3"> 
+    <h3>UI 구현 </h3>
+    <p>UI 구현이란 UI 설계 산출물과 GUI 디자인 가
+이드를 바탕으로 UI 구현 표준을 수립하고 UI를
+제작하는 능력이다.</p>
+   </article>
+   <article class="at4"> 
+    <h3>UI 테스트</h3> 
+    <p>UI 테스트란 구현된 UI를 검증하기 위하여 사
+용성 테스트 계획, 수행, 분석, 결과 보고를 수행
+하는 능력이다.</p>
+   </article>
+ </section>
+<aside>
+  <img src="img/1.jpg" alt="no">
+  <img src="img/2.jpg" alt="no">
+  <img src="img/3.jpg" alt="no">
+</aside>
+<footer>
+  <p>Copyright 2019 &copy; 제갈강</p>
+</footer>
+</div>
+</body>
+</html>

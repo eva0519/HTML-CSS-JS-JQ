@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>실습해 보자6-4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+*{margin:0 auto; padding:0;}
+ul,li{list-style:none;}
+#wrap{width:90%;}
+header{background:#09f;}
+h1{padding:2%; color:#fff;}
+h5{padding:0 0 1% 2%; color:#fff;}
+nav{background-color:#ccc;}
+nav li{float:left; padding:0.5%; margin:0;text-align:center; color:#333; width:15.6%;}
+nav:after{content:""; clear:both; display:block;}
+article{ float:left; width:70% }
+aside{width:30%; float:right; }
+section{width:100%; background-color:#eee;}
+h2{padding:1% 0 0 2%;}
+h3{padding:1% 0 0 2%;}
+#content:after{content:""; clear:both; display:block;}
+footer{background:#666; color:#fff; width:100%;}
+p{padding:2%;}
+@media all and (min-width:320px){
+nav{height:auto;}
+nav li{width:32%;}
+article{width:100%;}
+aside{width:100%;}}
+@media all and (min-width:768px){
+nav li{float:left; padding:0.5%; margin:0;text-align:center; color:#333; width:15.6%;}
+article{width:100%;}
+aside{width:100%;}}
+@media all and (min-width:1024px){
+nav li{float:left; padding:0.5%; margin:0;text-align:center; color:#333; width:15.6%;}
+article{ float:left; width:70% }
+aside{width:30%; float:right; }}
+</style></head><body>
+<div id="wrap">
+	<header>
+    	<h1>header</h1>
+        <h5>header의 두번째 제목입니다.</h5>
+        <nav>
+        	<ul>
+            	<li>버튼1</li>
+                <li>버튼2</li>
+                <li>버튼3</li>
+                <li>버튼4</li>
+                <li>버튼5</li>
+				<li>버튼6</li>
+            </ul>
+        </nav>
+    </header>
+<div id="content">
+    <article>
+        <section>
+            <h3>article1</h3>
+            <p>article1의 본문</p>
+        </section> <hr>
+        <section>
+            <h3>article2</h3>
+            <p>article2의 본문</p>
+        </section>
+    </article>
+    <aside>
+        <h3>aside</h3>
+        <p>aside 본문</p>
+    </aside>
+</div>
+    <footer><p>footer</p></footer>
+</div></body></html>

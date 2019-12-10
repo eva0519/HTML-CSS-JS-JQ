@@ -1,0 +1,26 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:inherit;}
+#wrap{width:800px;}
+header{background:#09f;}
+h1{padding:20px; color:#fff;}
+h3{padding:10px 0 0 20px;}
+h5{padding:0 0 10px 20px; color:#fff;}
+nav{background: #ccc;}
+nav li{float:left; padding:5px; margin:0; text-align: center; color:#333; width:150px;}
+nav:after{content:""; clear:both; display:block;}
+article{float:left;}
+section{width:500px; background:#eee;}
+aside{width:150px;}
+#content:after{content:""; clear:both; display:block;}
+footer{background: #666; color:#fff; widows: 800px;}
+p{padding: 20px; text-align: center;}
+img{margin:20px;}
+#content{background: #eee;}
+li:hover{background:#fff; color:#09f;}
+html,body,#wrap,aside,#content,article{height: 100%;}
+.left{background: #f33; float:left;}
+.right{background: url(../img/bg.gif); float:right;}
+/* css를 외부링크로 연결했기 때문에 css상에서의 이미지 url주소는 
+../를 통해 css폴더를 벗어난뒤 img폴더로 들어가야함 */

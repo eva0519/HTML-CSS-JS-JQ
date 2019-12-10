@@ -1,0 +1,89 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:inherit; text-align: center; display:block;}
+
+.cf:after{content:""; clear:both; display:block;}
+
+#wrap{width:1200px; height:700px; background:#ccc;}
+header{width:100%; height:100px; background:#69f;}
+
+.logo{width:200px; height:100px; background:rgb(149, 155, 238); float:left;}
+nav{width:1000px; height:100px; float:left;}
+
+.fakeimg{
+  width:200px; line-height:40px; background:rgb(171, 238, 218); position: relative; top:30px;
+  text-align: center;
+}
+
+.gnb>li>a{width:160px; line-height:40px; background:#333; color:#fff;}
+.gnb>li>a:hover{background:#fff; color:#333;}
+
+.sub>li>a{width:160px; line-height:40px; background:#339; color:#fff;}
+.sub>li>a:hover{background:#fff; color:#339;}
+
+.sub{display:none; position:absolute; z-index: 1;}
+.gnb:hover .sub{display:block;}
+.gnb>li{float:left;}
+
+.gnb{position:relative; top:30px; left:330px;}
+
+/* 슬라이드 */
+.slide{width:100%; height:300px; overflow:hidden;}
+.slide>ul{animation:slide 8s infinite;}
+@keyframes slide{
+  0% {margin-top:0px;}
+  33% {margin-top:-300px;}
+  66% {margin-top:-600px;}
+  100% {margin-top:-900px;}
+}
+.slide>ul>li:nth-child(1){width:1200px; height:300px; background:#900;}
+.slide>ul>li:nth-child(2){width:1200px; height:300px; background:#090;}
+.slide>ul>li:nth-child(3){width:1200px; height:300px; background:#009;}
+.slide>ul>li:nth-child(4){width:1200px; height:300px; background:#900;}
+
+/* content */
+.content{width:100%; height:200px; background:lemonchiffon;}
+.tabmenu,.banner,.link{width:380px; height:180px; padding:10px; float:left;}
+
+.tab>li>a{width:120px; line-height:36px; background:lightpink; color:#333;}
+.tab>li>a:hover{background:#333; color:#fff;}
+.tab>li{float:left;}
+
+.notice span{display:block; float:left; line-height:36px; text-align: center;}
+.notice li span:nth-child(1){width:50px;}
+.notice li span:nth-child(2){width:230px; text-align: left;}
+.notice li span:nth-child(3){width:100px;}
+.notice a {background:#eee;}
+.notice a:hover{background:#333; color:#fff;}
+
+.gall>li{width:120px; height:120px; background:lightsteelblue;
+        margin:12px 10px 0 0; float:left;}
+.gall>li:last-child{margin:12px 0 0 0;}
+.gall{display:none;}
+
+.banner>h3{text-align: center; border-bottom : 1px solid #333; line-height:35px;}
+.banner>p{width:380px; height:144px; background:rgba(255,255,255,.9);}
+
+.link>h3{text-align: center; border-bottom : 1px solid #333; line-height:35px;}
+.link>p{width:380px; height:144px; background : sandybrown;}
+.box{width:120px; height:120px; background:lightsteelblue;
+  margin:12px 10px 0 0; float:left; line-height:120px; text-align: center;
+  border-radius: 15%;}
+  /* border-radius 테두리 둥글게 50%는 전체적으로 원형 */
+.box:last-child{margin:12px 0 0 0;}
+
+
+/* footer */
+.f_logo{width:200px; height:100px; float:left;}
+.copy{width:800px; line-height:100px; background:cornsilk; float:left; text-align: center; text-transform:capitalize;}
+.sns{width:200px; height:100px; float:left;}
+/* a.sn{width:50px; line-height:50px; text-align: center; float:left; background:lightsteelblue;
+    border-radius: 15%; margin:0 10px 0 0;
+}
+.sn:last-child{margin-right:0px;}
+.sntab{width:185px; height:75px; margin:25px 0 0 15px;} */
+
+.snstab{margin:25px 0 0 15px;}
+.snstab>li{float:left;}
+.snstab>li>a>img{margin-right:10px;}

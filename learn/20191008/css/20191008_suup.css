@@ -1,0 +1,16 @@
+*{margin:0 auto; padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none; color:inherit;
+  text-align:center; display:block;
+  }
+#wrap{width:800px; background:#36f;}
+header{width:100%; height:200px; background:#69f;}
+.logo{width:200px; height:200px; background:#8bf; float:left;}
+.fakeimg{width:200px; height:100px; background:#aef;
+        position:relative; top:50px;}     /*나중에 배움. img를 정렬하는법*/
+.head{width:600px; height:200px; background:#aae; float:left;}
+header:after{content:""; clear:"both"; display:"block";}
+.sitemap{width:600px; height:100px; background:#a9c;}
+.gnb>li>a{width:150px; line-height:100px; background:#aba;}
+.gnb>li>a:hover{background:#36f; color:#fff; transition:all 0.6s;}
+.gnb>li{float:left;}

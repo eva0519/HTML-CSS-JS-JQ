@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin:0 auto; padding:0;}
+    ul,li{list-style: none;}
+    a{text-decoration: none; color:inherit; display:block; text-align: center;}
+    #wrap{width:800px; background:rgb(197, 197, 197);}
+    header>h1{text-align: center; line-height:100px; background:#68f; color:#fff;}
+
+    .gnb>li>a{width:200px; line-height:40px; background:rgba(51, 51, 51, 0.767); color:#fff;}
+    .gnb>li>a:hover{width:200px; line-height:40px; background:rgba(255, 255, 255, 0.739); color:#333;}
+    .sub>li>a{width:200px; line-height:40px; background:rgba(51, 51, 51, 0.767); color:#fff;}
+    .sub>li>a:hover{width:200px; line-height:40px; background:rgba(255, 255, 255, 0.726); color:#333;}
+    
+    .gnb{display:flex;}
+    .sub{display:none; position:absolute; z-index:1;}
+    .gnb:hover .sub{display:block;}
+    li:hover>a{width:200px; line-height:40px; background:rgb(255, 113, 113); color:#333; transition:all .5s;}
+
+    .cf:after{content:""; clear:both; display:block;}
+
+    #slide{width:800px; height:300px; overflow:hidden;}
+    #slide>.cf{width:3200px; height:300px; animation:fade 8s infinite;}
+    #slide>.cf>li{float:left; width:800px; height:300px; background:#68f;}
+    #slide>.cf>li:nth-child(1){background:#faa;}
+    #slide>.cf>li:nth-child(2){background:#afa;}
+    #slide>.cf>li:nth-child(3){background:#aaf;}
+    #slide>.cf>li:nth-child(4){background:#faa;}
+    @keyframes fade{
+      0% {margin-left : 0px;}
+
+      26% {margin-left : 0px; opacity: 1;}
+      29% {margin-left : 0px; opacity: 0;}
+      30% {margin-left : -800px; opacity: 0;}
+      33% {margin-left : -800px; opacity: 1;}
+
+      59% {margin-left : -800px; opacity: 1;}
+      62% {margin-left : -800px; opacity: 0;}
+      63% {margin-left : -1600px; opacity: 0;}
+      66% {margin-left : -1600px; opacity: 1;}
+
+      93% {margin-left : -1600px; opacity: 1;}
+      96% {margin-left : -1600px; opacity: 0;}
+      97% {margin-left : -2400px;opacity: 0;}
+      100% {margin-left : -2400px;opacity: 1;}
+    }
+
+
+    #content {display:flex;}
+    aside{width:20%; height:600px; background:rgb(118, 184, 118);}
+    article{width:60%;}
+
+    footer{width:100%; text-align: center; line-height: 100px; background:rgb(151, 162, 187);}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>플렉스연습1</h1>
+      <nav>
+        <ul class="gnb">
+          <li><a href="#">버튼1</a>
+            <ul class="sub">
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">버튼2</a>
+            <ul class="sub">
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">버튼3</a>
+            <ul class="sub">
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">버튼4</a>
+            <ul class="sub">
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="slide">
+      <ul class = "cf">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="content">
+      <aside>내용1</aside>
+      <article>내용2</article>
+      <aside>내용3</aside>
+    </div>
+    <footer>푸터</footer>
+  </div>
+</body>
+</html>

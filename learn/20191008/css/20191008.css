@@ -1,0 +1,9 @@
+a {
+  text-decoration:none; color:inherit;  /*reset*/
+  text-align:center; display:block; /*reset*/
+  line-height:50px;
+  width:150px;
+  }   
+  /* 앵커의 밑줄,색상을 없애줌 필수초기화, 크기조절을 위해 block형태로 변환
+  버튼만드는 코드의 기본형.*/
+a:hover{background:#36f; color:#fff;}  /*핸드오버*/

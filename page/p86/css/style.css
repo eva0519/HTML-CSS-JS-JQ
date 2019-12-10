@@ -1,0 +1,86 @@
+@charset "utf-8";
+*{margin:0 auto; padding:0;}
+li{list-style: none; width:120px; text-align: center;}
+a{text-decoration: none; color:inherit; padding:15px; display:inline-block;}
+.bg:after{
+  background:url(../img/bg2.jpg)fixed;
+  position:absolute;
+  background-size:cover;
+  opacity:0.5 !important;
+  z-index:-1;
+  content:"";
+  width:100%;
+  height:100%;
+}
+/* 이거 왜함 */
+
+body{font-family: "맑은 고딕", "고딕", "굴림";}
+#wrap{width:800px;}
+
+header{
+  width:100%;
+  height:150px;
+  background:rgba(0,100,255,0.7) url(../img/bg_han.png)no-repeat right center;
+}
+header nav{float:left;width:70%;}
+
+nav>ul>li{float:left;}
+nav ul li a{color:white;}
+footer p {padding:20px;}
+h1{font-size: 1.5em; color:#fff; padding:20px;}
+h3{font-size: 1.0em;}
+p{line-height: 20px; font-size:12px;}
+section{float:left; width:580px; padding:5px;}
+section article{
+  float:left;
+  width:250px;
+  height:220px;
+  margin:5px;
+  padding:10px;
+  border:1px solid #ccc;
+}
+aside{float:right;
+width:200px;
+text-align: center;}
+aside img{margin:10px;}
+footer{
+  clear:both;
+  width:800px;
+  margin-bottom: 0;
+  background: #333;
+  color:white;
+  text-align: center;
+}
+.at1,.at2,.at3,.at4,li{
+  transition:1s; 
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  -ms-transition:1s;
+}
+.at1:hover{
+  background-color:#cf9;
+  border:1px solid green;
+}
+.at2:hover{
+  background-color:#a2d0ff;
+  border:1px solid blue;
+}
+.at3:hover{
+  background-color:#ebcbfe;
+  border:1px solid purple;
+}
+.at4:hover{
+  background-color:#fc3;
+  border:1px solid red;
+}
+li:hover{background:#ccc;}
+a:hover{color:#06c;}
+
+.sub{display:none; position: absolute; z-index: 1; background:rgba(0,0,0,0.7);}
+nav ul:hover>li>ul{display:block;}
+
+/* nav ul:hover>li>ul{display:block;} 상세메뉴를 일괄적으로 열고 싶을 때 */
+/* nav>ul>li:hover .sub{display:block;} 각각의 상세메뉴바를 열고 싶을 때 */
+/* 네비 후손 ul에 마우스를 올리면 바로 밑 자식 li 의 직계자식 ul이 전부열림
+네비 직계자식 ul의 직계자식 li에 마우스를 올리면 그 li의 후손인 sub클래스만 블럭형으로 보임(다른 li들의 후손인 sub클래스는 안보임) */

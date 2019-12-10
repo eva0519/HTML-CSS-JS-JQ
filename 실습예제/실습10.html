@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>실습10</title>
+<style>
+	*{margin:0 auto; padding:0;}
+	ul,li{list-style:none;}
+	a{text-decoration:none; color:inherit; display:inline-block; padding:10px}
+	#wrap{width:80%; background:#ffc;}
+	li{text-align:center; width:100px;}
+	nav>ul>li{float:left;}
+	li:hover{background:#aaa; color:#fff;}
+	nav{background:#ddd;}
+	nav:after{content:""; clear:both; display:block;}
+	
+	.sub{display:none; position:absolute; z-index:1; background:rgba(0,0,0,0.7);}
+	.gnb2 li:hover ul{display:block;}
+	
+
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="head1">
+    	<div class="logo">LOGO</div>
+        <nav>
+        	<ul class="gnb1">
+            	<li><a href="#">버튼1</a></li>
+                <li><a href="#">버튼2</a></li>
+                <li><a href="#">버튼3</a></li>
+                <li><a href="#">버튼4</a></li>
+                <li><a href="#">버튼5</a></li>
+            </ul>
+        </nav>        
+    </div>
+    <div class="head2">
+    	<div class="logo">LOGO</div>
+        <nav>
+        	<ul class="gnb2">
+            	<li><a href="#">버튼1</a>
+                	<ul class="sub">
+                        <li><a href="#">S버튼1</a></li>
+                        <li><a href="#">S버튼2</a></li>
+                        <li><a href="#">S버튼3</a></li>
+                        <li><a href="#">S버튼4</a></li>
+                        <li><a href="#">S버튼5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼2</a>
+	                <ul class="sub">
+                        <li><a href="#">S버튼1</a></li>
+                        <li><a href="#">S버튼2</a></li>
+                        <li><a href="#">S버튼3</a></li>
+                        <li><a href="#">S버튼4</a></li>
+                        <li><a href="#">S버튼5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼3</a>
+                	<ul class="sub">
+                        <li><a href="#">S버튼1</a></li>
+                        <li><a href="#">S버튼2</a></li>
+                        <li><a href="#">S버튼3</a></li>
+                        <li><a href="#">S버튼4</a></li>
+                        <li><a href="#">S버튼5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼4</a>
+                	<ul class="sub">
+                        <li><a href="#">S버튼1</a></li>
+                        <li><a href="#">S버튼2</a></li>
+                        <li><a href="#">S버튼3</a></li>
+                        <li><a href="#">S버튼4</a></li>
+                        <li><a href="#">S버튼5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">버튼5</a>
+                	<ul class="sub">
+                        <li><a href="#">S버튼1</a></li>
+                        <li><a href="#">S버튼2</a></li>
+                        <li><a href="#">S버튼3</a></li>
+                        <li><a href="#">S버튼4</a></li>
+                        <li><a href="#">S버튼5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>        
+    </div>
+</div>
+</body>
+</html>

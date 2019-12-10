@@ -1,0 +1,20 @@
+* {margin:0 auto; padding:0;}     /* */
+#wrap {width: 800px; background:burlywood;}
+.logo {height: 50px; background:beige; 
+      line-height: 50px; text-align: center;}
+ul,li {list-style: none;}
+li {width: 200px; 
+    text-align: center; 
+    line-height: 40px; 
+    background: darkgray; 
+    float: left;}
+
+li:hover{background:white; color:blue; transition:all 0.6s;}   /*호버 마우스오버 색상변경,지연기능*/
+nav:after{content:""; clear:both; display:block;}
+
+.left {width:600px; height:600px;background:chocolate; float:left;}
+.right {width:200px; height:600px;background:darkgoldenrod; float:right;}
+article:after{content:""; clear:both; display:block;}
+
+section{width:560px; height:260px; padding: 20px;}
+footer{width:750px; height:50px; line-height: 50px; text-align:right; padding: 0 50px 0 0;}

@@ -1,0 +1,94 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+ul,li{list-style:none;}
+a{
+  text-decoration: none;
+  color: inherit;
+  display:block;
+  text-align: center;
+}
+.cf:after{content:""; clear:both; display:block;}
+
+#wrap{width:1000px; height:650px;  outline:1px black solid;}
+.left{width:200px; height:650px; float:left;}
+.right{width:800px; height:650px; float:left;}
+
+.logo{width:200px; height:100px;}
+.logo img {position:relative; top:30px; width:200px; height:40px;}
+
+nav {padding:10px; width:180px; height:530px; outline:1px black solid;}
+.gnb {border:1px black solid;}
+.gnb li a{width:178px; line-height:40px;}
+.gnb li:hover>a {background:rgba(0, 0, 0, 0.815); color:#eee;}
+
+.sub{display:none;}
+
+.fade {width:800px; height:350px;}
+.fade img {width:800px; height:350px;}
+.fade-item {
+  position:absolute;
+  z-index:0;
+  transition:opacity 1.5s ease-in-out;
+  opacity:0;
+}
+.showing {
+  opacity:1;
+  z-index:1;
+}
+
+/* content */
+.content{width:800px; height:200px; }
+section{
+  width:246px; height:180px;
+  padding:10px; border-right:1px #333 solid;
+  float:left;
+}
+section:last-of-type{border:0;}
+.content .tab>li>a{width:100%; line-height:45px; background:#eee;}
+
+.notice>li>a:hover{background:#69f; color:#fff;}
+.notice span{display:inline-block; line-height:45px; text-align: center;}
+.notice span:nth-child(1){width:40px;}
+.notice span:nth-child(2){width:120px; text-align: left;}
+.notice span:nth-child(3){width:86px;}
+
+.gall img{width:70px; height:70px;}
+.gall>li{float:left; padding:33px 6px 32px 6px;}
+.gall>li>a:hover{opacity:.6; transition:.6s;}
+
+.short img{width:70px; height:70px;}
+.short>li{float:left; padding:33px 6px 32px 6px;}
+.short>li>a:hover{opacity:.6; transition:.6s;}
+
+footer{width:800px; height:99px; border-top:1px solid black;}
+.f-left{width:600px; line-height:19px; padding:30px 0; text-align:center; float:left;}
+.f-right{width:200px; height:99px; float:left;}
+.sns{width:200px; height:49px;}
+.sns a{
+  margin:5px 0 5px 20px; width:40px; line-height: 39px; 
+  float:left; outline:2px #333 solid;
+}
+.sns a:last-child{margin-right:20px;}
+.sns a:hover{background:#ffc;}
+
+.family{width:200px; line-height:50px; text-align: center;}
+
+.popup{
+  display:none;
+  width:600px; height:400px; outline:1px #333 solid;
+  background:#eee; left:50%; top:50%;
+  position:absolute; z-index:100;
+  transform: translate(-90%,-90%);
+}
+
+.popup h3{width:100%; line-height:50px; text-align: center;}
+.popup p {width:580px; height:280px; padding:10px;}
+.close{
+  width:80px; line-height:40px;
+  outline: 1px #333 solid;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.close:hover{background:#69f;}

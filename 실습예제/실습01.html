@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>실습해 보자</title>
+<style>
+*{margin:0 auto; padding:0;}
+ul,li{list-style:none;}
+#wrap{width:600px;}
+header{background:#09f;}
+h1{padding:20px; color:#fff;}
+h5{padding:0 0 10px 20px; color:#fff;}
+nav{background-color:#ccc;}
+nav li{float:left; padding:5px; margin:0;text-align:center; color:#333; width:90px;}
+nav:after{content:""; clear:both; display:block;}
+article{ float:left; }
+section{width:400px; background-color:#eee;}
+h2{padding:10px 0 0 20px;}
+h3{padding:10px 0 0 20px;}
+aside{width:200px; float:right; }
+#content:after{content:""; clear:both; display:block;}
+footer{background:#666; color:#fff; width:600px;}
+p{padding:20px;}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<header>
+    	<h1>header</h1>
+        <h5>header의 두번째 제목입니다.</h5>
+        
+        <nav>
+        	<ul>
+            	<li>버튼1</li>
+                <li>버튼2</li>
+                <li>버튼3</li>
+                <li>버튼4</li>
+                <li>버튼5</li>
+				<li>버튼6</li>
+            </ul>
+        </nav>
+    </header>
+    
+<div id="content">
+    <article>
+        <section>
+            <h3>article1</h3>
+            <p>article1의 본문</p>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h3>article2</h3>
+            <p>article2의 본문</p>
+        </section>
+    </article>
+    
+    <aside>
+        <h3>aside</h3>
+        <p>aside 본문</p>
+    </aside>
+</div>
+       
+    <footer>
+    	<p>footer</p>
+    </footer>
+</div>
+</body>
+</html>
