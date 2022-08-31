@@ -1,3 +1,4 @@
+
 // notice
 
 var note = document.querySelector("#note");
@@ -155,3 +156,4 @@ $(".pop1").click(
 $(".close").click(
     () => {$("#popup").hide();}
 )
+
